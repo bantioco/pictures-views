@@ -18,6 +18,13 @@ Includes :
 
 Use example :
 ```
+<div id="screen_picture">
+    <div class="content-picture"><img src="./A.jpg" alt=""></div>
+    <div class="content-picture"><img src="./B.jpg" alt=""></div>
+    <div class="content-picture"><img src="./C.jpg" alt=""></div>
+    <div class="content-picture"><img src="./D.jpg" alt=""></div>
+</div>
+
 $('#screen_picture').viewsPictures()
 ```
 
