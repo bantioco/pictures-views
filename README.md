@@ -24,8 +24,9 @@ Use example :
     <div class="content-picture"><img src="./C.jpg" alt=""></div>
     <div class="content-picture"><img src="./D.jpg" alt=""></div>
 </div>
-
-$('#screen_picture').viewsPictures()
+<script>
+    jQuery(function( $ ){ $(document).ready(function(){ $('#screen_picture').viewsPictures(); }) })
+</script>
 ```
 
 
