@@ -7,17 +7,19 @@ Includes :
 ```
 ...
 <head>
-<link rel="stylesheet" href="./build/assets/css/pictures.views.css">
+    <link rel="stylesheet" href="./build/assets/css/pictures.views.css">
 </head>
 ...
-
-<script src="./build/assets/lib/jquery.js"></script>
-<script src="./build/assets/js/jQuery.pictures.views.pack.js"></script>
+<body>
+    <script src="./build/assets/lib/jquery.js"></script>
+    <script src="./build/assets/js/jQuery.pictures.views.pack.js"></script>
 </body>
 ```
 
 Use example :
 ```
+...
+
 <div id="screen_picture">
     <div class="content-picture"><img src="./A.jpg" alt=""></div>
     <div class="content-picture"><img src="./B.jpg" alt=""></div>
@@ -27,6 +29,9 @@ Use example :
 <script>
     jQuery(function( $ ){ $(document).ready(function(){ $('#screen_picture').viewsPictures(); }) })
 </script>
+
+...
+
 ```
 
 
