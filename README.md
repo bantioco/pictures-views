@@ -12,7 +12,7 @@ Includes :
 ...
 
 <script src="./build/assets/lib/jquery.js"></script>
-<script src="./build/assets/js/jQuery.pictures.views.js"></script>
+<script src="./build/assets/js/jQuery.pictures.views.pack.js"></script>
 </body>
 ```
 
