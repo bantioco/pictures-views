@@ -26,6 +26,7 @@ Options :
 ```
 $('#screen_picture').viewsPictures({
     bgColor     : "red",
-    speedImg    : 300
+    speedImg    : 300,
+    effectImg : "slide"// slide, fade, bounce
 })
 ```
