@@ -3,7 +3,7 @@
 
 
 
-Includes;
+Includes :
 ```
 ...
 <head>
@@ -16,13 +16,13 @@ Includes;
 </body>
 ```
 
-Use example;
+Use example :
 ```
 $('#screen_picture').viewsPictures()
 ```
 
 
-Options ;
+Options :
 ```
 $('#screen_picture').viewsPictures({
     bgColor: "red",
