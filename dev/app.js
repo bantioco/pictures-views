@@ -4,7 +4,8 @@ jQuery( function( $ ){
 
         $('#screen_picture').viewsPictures({
             bgColor: "#FAFAFA",
-            speedImg: 300
+            speedImg: 300,
+            effectImg : "slide"
         })
     })
 
