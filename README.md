@@ -25,6 +25,7 @@ $('#screen_picture').viewsPictures()
 Options :
 ```
 $('#screen_picture').viewsPictures({
-    bgColor: "red",
+    bgColor     : "red",
+    speedImg    : 300
 })
 ```
