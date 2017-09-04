@@ -7,11 +7,7 @@
         *************************************/
         var config= {
             "bgColor"   : "#BABABA",
-            "items"      : ".picture",
-            "top"       : "20%",
-            "left"      : "20%",
-            "right"     : "20%",
-            "bottom"    : "20%",
+            "speedImg"     : 800,
             "callback"  : null
         };
         var params = $.extend(config, options);
@@ -21,7 +17,7 @@
         /*************************************
             Add background..
         *************************************/
-        var block_background = '<div class="screen_bg" style="background-color:'+config.bgColor+'"></div>';
+        var block_background = '<div class="screen_bg" style="background-color:'+params.bgColor+'"></div>';
         $('body').append(block_background);
         /************************************/
 
@@ -52,7 +48,7 @@
                 var c = $(this).attr('data-screen');
 
                 $('.screen_bg').fadeIn(300, function(){
-                    $('.screen_root').fadeIn(300, function(){ $('ul.screen_block').children('li[data-screen="'+c+'"]').slideDown(300); })
+                    $('.screen_root').fadeIn(300, function(){ $('ul.screen_block').children('li[data-screen="'+c+'"]').slideDown(params.speedImg); })
                 });
             })
 
@@ -67,13 +63,15 @@
                 var g = $('ul.screen_block').children('li:visible').attr('data-screen')
                 var o = parseInt(g)+1;
 
-                $('ul.screen_block').children('li[data-screen="'+g+'"]').slideUp(300)
+                $('ul.screen_block').children('li[data-screen="'+g+'"]').slideUp(params.speedImg)
+
+                timeOut = params.speedImg + 100;
 
                 if( o <= $('li.screen_list').length ){
-                    setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').slideDown(300); },400)
+                    setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').slideDown(params.speedImg); },timeOut)
                 }
                 else{
-                    setTimeout(function(){ $('ul.screen_block').children('li:first').slideDown(300); },400)
+                    setTimeout(function(){ $('ul.screen_block').children('li:first').slideDown(params.speedImg); },timeOut)
                 }
 
             })

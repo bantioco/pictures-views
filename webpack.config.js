@@ -6,7 +6,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 let pathsToClean = [
-  './build/assets/*.*'
+  './build/assets/js/*.*'
 ]
 
 let cleanOptions = {
@@ -37,9 +37,9 @@ let config = {
      entry: './dev/jQuery.pictures.views.js',
      watch: dev,
      output: {
-         path: folder+'/build/assets',
+         path: folder+'/build/assets/js',
          filename: 'jQuery.pictures.views.pack.js',
-         publicPath: "/build/assets/"
+         publicPath: "/build/assets/js/"
      },
      devtool: dev ? "cheap-module-eval-source-map" : false,
      module: {
