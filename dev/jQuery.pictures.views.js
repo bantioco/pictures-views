@@ -15,6 +15,20 @@
         /************************************/
 
 
+        function makeid() {
+            var text = "";
+            var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+            for (var i = 0; i < 5; i++)
+            text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+            return text;
+        }
+
+        //console.log(makeid());
+
+        var uniqId = makeid();
+
         /*************************************
             Add background..
         *************************************/
@@ -26,10 +40,9 @@
         /*************************************
             Add block slide picture
         *************************************/
-        var block_picture ='<div class="screen_root"><div class="screen_nav_left"></div><ul class="screen_block"></ul><div class="screen_nav_right"></div></div>';
+        var block_picture ='<div id="'+uniqId+'" class="screen_root"><div class="screen_nav_left"></div><ul class="screen_block"></ul><div class="screen_nav_right"></div></div>';
         $('body').append(block_picture);
         /************************************/
-
 
 
         return this.find('img').each(function(i, e){
@@ -41,9 +54,9 @@
             var src = $(e).attr('src');
             var id = i+1;
 
-            $(document).find('.screen_root').children('ul.screen_block').append('<li data-screen="'+d+'" id="screen_'+id+'" class="screen_list"><img class="screen_img" src="'+src+'" /></li>');
+            $("#"+uniqId).find('ul.screen_block').append('<li data-screen="'+d+'" id="screen_'+id+'" class="screen_list"><img class="screen_img" src="'+src+'" /></li>');
 
-            $('#screen_picture').find('img').off('click').on('click', function(){
+            $(this).off('click').on('click', function(){
 
                 var c = $(this).attr('data-screen');
 
@@ -109,8 +122,11 @@
                     else{
                         setTimeout(function(){ $('ul.screen_block').children('li:first').fadeIn(params.speedImg); },timeOut)
                     }
-
                 }
+
+                /****************
+                    UI Effect
+                ****************/
                 else if ( params.effectImg === "bounce" ){
 
                     $('ul.screen_block').children('li[data-screen="'+g+'"]').fadeOut(params.speedImg)
@@ -133,7 +149,6 @@
                     else{
                         setTimeout(function(){ $('ul.screen_block').children('li:first').slideDown(params.speedImg); },timeOut)
                     }
-
                 }
 
             })
@@ -165,9 +180,11 @@
                     else{
                         setTimeout(function(){ $('ul.screen_block').children('li:last').fadeIn(params.speedImg); },timeOut)
                     }
-
                 }
 
+                /****************
+                    UI Effect
+                ****************/
                 else if ( params.effectImg === "bounce" ){
 
                     $('ul.screen_block').children('li[data-screen="'+g+'"]').fadeOut(params.speedImg)
@@ -178,7 +195,6 @@
                     else{
                         setTimeout(function(){ $('ul.screen_block').children('li:last').fadeIn(params.speedImg).effect('bounce'); },timeOut)
                     }
-
                 }
                 else{
 
@@ -190,7 +206,6 @@
                     else{
                         setTimeout(function(){ $('ul.screen_block').children('li:last').slideDown(params.speedImg); },timeOut)
                     }
-
                 }
 
             })
@@ -202,6 +217,8 @@
     }
 
 })( jQuery );
+
+
 
 
 
