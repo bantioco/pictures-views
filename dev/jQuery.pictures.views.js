@@ -26,17 +26,7 @@
             return text;
         }
 
-        //console.log(makeid());
-
         var uniqId = makeid();
-
-        /*************************************
-            Add background..
-        *************************************/
-        var block_background = '<div class="screen_bg" style="background-color:'+params.bgColor+'"></div>';
-        $('body').append(block_background);
-        /************************************/
-
 
         /*************************************
             Add block slide picture
@@ -49,6 +39,13 @@
             '</div>';
 
         $('body').append(block_picture);
+        /************************************/
+
+        /*************************************
+            Add background..
+        *************************************/
+        var block_background = '<div class="screen_bg" style="background-color:'+params.bgColor+'"></div>';
+        $("#"+uniqId).append(block_background);
         /************************************/
 
 
@@ -91,7 +88,7 @@
                 });
             })
 
-            $(document).off('click', '.screen_bg').on('click', '.screen_bg', function(){
+            $("#"+uniqId).off('click', '.screen_bg').on('click', '.screen_bg', function(){
 
                 $('ul.screen_block').children('li').fadeOut(300, function(){
                     $('.screen_root').fadeOut(300, function(){
@@ -102,7 +99,7 @@
 
             })
 
-            $(document).off('click', '.screen_nav_right').on('click', '.screen_nav_right', function(){
+            $("#"+uniqId).off('click', '.screen_nav_right').on('click', '.screen_nav_right', function(){
 
                 var g = $('ul.screen_block').children('li:visible').attr('data-screen')
                 var o = parseInt(g)+1;
@@ -160,7 +157,7 @@
 
             })
 
-            $(document).off('click', '.screen_nav_left').on('click', '.screen_nav_left', function(){
+            $("#"+uniqId).off('click', '.screen_nav_left').on('click', '.screen_nav_left', function(){
 
                 var g = $('ul.screen_block').children('li:visible').attr('data-screen')
                 var o = parseInt(g)-1;
@@ -218,8 +215,6 @@
             })
 
        });
-
-
 
     }
 
