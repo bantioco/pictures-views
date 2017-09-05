@@ -41,7 +41,7 @@ jQuery( function( $ ){
         $('#screen_picture').viewsPictures({
             bgColor: "#FAFAFA",
             speedImg: 300,
-            effectImg : "slide",
+            effectImg : "clip",
             navColor : "#555555"
         })
     })
