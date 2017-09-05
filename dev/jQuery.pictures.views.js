@@ -7,8 +7,9 @@
         *************************************/
         var config= {
             "bgColor"       : "#BABABA",
-            "speedImg"      : 800,
+            "speedImg"      : 400,
             "effectImg"     : "slide",
+            "navColor"      : "#000000",
             "callback"      : null
         };
         var params = $.extend(config, options);
@@ -40,7 +41,13 @@
         /*************************************
             Add block slide picture
         *************************************/
-        var block_picture ='<div id="'+uniqId+'" class="screen_root"><div class="screen_nav_left"></div><ul class="screen_block"></ul><div class="screen_nav_right"></div></div>';
+        var block_picture =
+            '<div id="'+uniqId+'" class="screen_root">'+
+                '<div class="screen_nav_left" style="color:'+params.navColor+'"></div>'+
+                '<ul class="screen_block"></ul>'+
+                '<div class="screen_nav_right" style="color:'+params.navColor+'"></div>'+
+            '</div>';
+
         $('body').append(block_picture);
         /************************************/
 

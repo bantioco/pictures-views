@@ -1,3 +1,7 @@
+import css from './pictures.views.css';
+
+console.log( css )
+
 jQuery( function( $ ){
 
     $(document).ready(function(){
@@ -5,7 +9,8 @@ jQuery( function( $ ){
         $('#screen_picture').viewsPictures({
             bgColor: "#FAFAFA",
             speedImg: 300,
-            effectImg : "slide"
+            effectImg : "slide",
+            navColor : "#555555"
         })
     })
 

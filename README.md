@@ -1,31 +1,32 @@
 # pictures-views
 
-
-
-
-Includes :
-```
-...
-<head>
-    <link rel="stylesheet" href="./build/assets/css/pictures.views.css">
-</head>
-...
-<body>
-    <script src="./build/assets/lib/jquery.js"></script>
-    <script src="./build/assets/js/jQuery.pictures.views.pack.js"></script>
-</body>
-```
-
 Use example :
 ```
 ...
 
-<div id="screen_picture">
-    <div class="content-picture"><img src="./A.jpg" alt=""></div>
-    <div class="content-picture"><img src="./B.jpg" alt=""></div>
-    <div class="content-picture"><img src="./C.jpg" alt=""></div>
-    <div class="content-picture"><img src="./D.jpg" alt=""></div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../build/assets/js/main.css">
+
+</head>
+<body>
+
+    <div id="screen_picture">
+        <div class="content-picture"><div class="in-content-picture"><img src="./A.jpg" alt=""></div></div>
+        <div class="content-picture"><div class="in-content-picture"><img src="./B.jpg" alt=""></div></div>
+        <div class="content-picture"><div class="in-content-picture"><img src="./C.jpg" alt=""></div></div>
+        <div class="content-picture"><div class="in-content-picture"><img src="./D.jpg" alt=""></div></div>
+    </div>
+
+
+    <script src="./jquery.js"></script>
+    <script src="../build/assets/js/lib.pack.js"></script>
+</body>
+</html>
 <script>
     jQuery(function( $ ){ $(document).ready(function(){ $('#screen_picture').viewsPictures(); }) })
 </script>
@@ -38,8 +39,9 @@ Use example :
 Options :
 ```
 $('#screen_picture').viewsPictures({
-    bgColor     : "red",
-    speedImg    : 300,
-    effectImg : "slide"// slide, fade, bounce
+    bgColor: "#FAFAFA",
+    speedImg: 300,
+    effectImg : "slide",// slide, fade, bounce
+    navColor : "#555555"
 })
 ```

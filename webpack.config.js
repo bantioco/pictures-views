@@ -11,7 +11,7 @@ let pathsToClean = [
 
 let cleanOptions = {
   root:     folder,
-  exclude:  ['common.js'],
+  exclude:  [''],
   verbose:  true,
   dry:      false
 }
@@ -34,12 +34,15 @@ if(!dev){
 }
 
 let config = {
-     entry: './dev/jQuery.pictures.views.js',
+     entry: {
+        lib: './dev/jQuery.pictures.views.js',
+        main: './dev/app.js'
+    },
      watch: dev,
      output: {
          path: folder+'/build/assets/js',
-         filename: 'jQuery.pictures.views.pack.js',
-         publicPath: "/build/assets/js/"
+         filename: '[name].pack.js',
+         publicPath: "/build/assets/"
      },
      devtool: dev ? "cheap-module-eval-source-map" : false,
      module: {
