@@ -1,8 +1,8 @@
 # pictures-views
 
 Use example :
+index.html
 ```
-...
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,15 +25,33 @@ Use example :
 
     <script src="./jquery.js"></script>
     <script src="../build/assets/js/lib.pack.js"></script>
+    <script src="./app.js"></script>
 </body>
 </html>
-<script>
-    jQuery(function( $ ){ $(document).ready(function(){ $('#screen_picture').viewsPictures(); }) })
-</script>
-
-...
 
 ```
+
+app.js
+```
+
+jQuery( function( $ ){
+
+    $(document).ready(function(){
+
+        $('#screen_picture').viewsPictures({
+            bgColor: "#FAFAFA",
+            speedImg: 300,
+            effectImg : "slide",
+            navColor : "#555555"
+        })
+    })
+
+})
+
+
+```
+
+
 
 
 Options :

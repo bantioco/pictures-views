@@ -33,5 +33,5 @@
     "webpack": "^3.5.2"
   },
   "author": "BANTIOCO",
-  "license": "ISC"
+  "license": "MIT"
 }
