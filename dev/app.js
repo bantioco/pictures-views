@@ -8,8 +8,8 @@ jQuery( function( $ ){
 
         $('#screen_picture').viewsPictures({
             bgColor: "#FAFAFA",
-            speedImg: 300,
-            effectImg : "slide",
+            speedImg: 800,
+            effectImg : "puff",
             navColor : "#555555"
         })
     })

@@ -56,10 +56,12 @@ jQuery( function( $ ){
 
 Options :
 ```
+//Implement jQuery ui effect..
+
 $('#screen_picture').viewsPictures({
     bgColor: "#FAFAFA",
     speedImg: 300,
-    effectImg : "slide",// slide, fade, bounce
+    effectImg : "slide",// slide, fade, bounce, clip, fold, puff
     navColor : "#555555"
 })
 ```

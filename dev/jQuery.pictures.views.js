@@ -74,11 +74,24 @@
                         $('.screen_root').fadeIn(300, function(){ $('ul.screen_block').children('li[data-screen="'+c+'"]').fadeIn(params.speedImg); })
                     }
 
-                    /****************
-                        UI Effect
-                    ****************/
+                    /*** UI Effect ***/
                     else if ( params.effectImg === "bounce" ){
-                        $('.screen_root').fadeIn(300, function(){ $('ul.screen_block').children('li[data-screen="'+c+'"]').fadeIn(params.speedImg).effect('bounce'); })
+                        $('.screen_root').fadeIn(300, function(){ $('ul.screen_block').children('li[data-screen="'+c+'"]').toggle('bounce', params.speedImg); })
+                    }
+
+                    /*** UI Effect ***/
+                    else if ( params.effectImg === "clip" ){
+                        $('.screen_root').fadeIn(300, function(){ $('ul.screen_block').children('li[data-screen="'+c+'"]').toggle('clip', params.speedImg); })
+                    }
+
+                    /*** UI Effect ***/
+                    else if ( params.effectImg === "fold" ){
+                        $('.screen_root').fadeIn(300, function(){ $('ul.screen_block').children('li[data-screen="'+c+'"]').toggle('fold', params.speedImg); })
+                    }
+
+                    /*** UI Effect ***/
+                    else if ( params.effectImg === "puff" ){
+                        $('.screen_root').fadeIn(300, function(){ $('ul.screen_block').children('li[data-screen="'+c+'"]').toggle('puff', params.speedImg); })
                     }
 
                     else{
@@ -128,18 +141,54 @@
                     }
                 }
 
-                /****************
-                    UI Effect
-                ****************/
+                /*** UI Effect ***/
                 else if ( params.effectImg === "bounce" ){
 
-                    $('ul.screen_block').children('li[data-screen="'+g+'"]').fadeOut(params.speedImg)
+                    $('ul.screen_block').children('li[data-screen="'+g+'"]').toggle('bounce', params.speedImg)
 
                     if( o <= $('li.screen_list').length || o == NaN ){
-                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').fadeIn(params.speedImg).effect('bounce'); },timeOut)
+                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').toggle('bounce', params.speedImg); },timeOut)
                     }
                     else{
-                        setTimeout(function(){ $('ul.screen_block').children('li:first').fadeIn(params.speedImg).effect('bounce'); },timeOut)
+                        setTimeout(function(){ $('ul.screen_block').children('li:first').toggle('bounce', params.speedImg); },timeOut)
+                    }
+                }
+                /*** UI Effect ***/
+                else if ( params.effectImg === "clip" ){
+
+                    $('ul.screen_block').children('li[data-screen="'+g+'"]').toggle('clip', params.speedImg)
+
+                    if( o <= $('li.screen_list').length || o == NaN ){
+                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').toggle('clip', params.speedImg); },timeOut)
+                    }
+                    else{
+                        setTimeout(function(){ $('ul.screen_block').children('li:first').toggle('clip', params.speedImg); },timeOut)
+                    }
+                }
+
+                /*** UI Effect ***/
+                else if ( params.effectImg === "fold" ){
+
+                    $('ul.screen_block').children('li[data-screen="'+g+'"]').toggle('fold', params.speedImg)
+
+                    if( o <= $('li.screen_list').length || o == NaN ){
+                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').toggle('fold', params.speedImg); },timeOut)
+                    }
+                    else{
+                        setTimeout(function(){ $('ul.screen_block').children('li:first').toggle('fold', params.speedImg); },timeOut)
+                    }
+                }
+
+                /*** UI Effect ***/
+                else if ( params.effectImg === "puff" ){
+
+                    $('ul.screen_block').children('li[data-screen="'+g+'"]').toggle('puff', params.speedImg)
+
+                    if( o <= $('li.screen_list').length || o == NaN ){
+                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').toggle('puff', params.speedImg); },timeOut)
+                    }
+                    else{
+                        setTimeout(function(){ $('ul.screen_block').children('li:first').toggle('puff', params.speedImg); },timeOut)
                     }
                 }
 
@@ -186,20 +235,58 @@
                     }
                 }
 
-                /****************
-                    UI Effect
-                ****************/
+                /*** UI Effect ***/
                 else if ( params.effectImg === "bounce" ){
 
-                    $('ul.screen_block').children('li[data-screen="'+g+'"]').fadeOut(params.speedImg)
+                    $('ul.screen_block').children('li[data-screen="'+g+'"]').toggle('bounce', params.speedImg)
 
                     if( o >= 1 ){
-                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').fadeIn(params.speedImg).effect('bounce'); },timeOut)
+                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').toggle('bounce', params.speedImg); },timeOut)
                     }
                     else{
-                        setTimeout(function(){ $('ul.screen_block').children('li:last').fadeIn(params.speedImg).effect('bounce'); },timeOut)
+                        setTimeout(function(){ $('ul.screen_block').children('li:last').toggle('bounce', params.speedImg); },timeOut)
                     }
                 }
+
+                /*** UI Effect ***/
+                else if ( params.effectImg === "clip" ){
+
+                    $('ul.screen_block').children('li[data-screen="'+g+'"]').toggle('clip', params.speedImg)
+
+                    if( o >= 1 ){
+                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').toggle('clip', params.speedImg); },timeOut)
+                    }
+                    else{
+                        setTimeout(function(){ $('ul.screen_block').children('li:last').toggle('clip', params.speedImg); },timeOut)
+                    }
+                }
+
+                /*** UI Effect ***/
+                else if ( params.effectImg === "fold" ){
+
+                    $('ul.screen_block').children('li[data-screen="'+g+'"]').toggle('fold', params.speedImg)
+
+                    if( o >= 1 ){
+                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').toggle('fold', params.speedImg); },timeOut)
+                    }
+                    else{
+                        setTimeout(function(){ $('ul.screen_block').children('li:last').toggle('fold', params.speedImg); },timeOut)
+                    }
+                }
+
+                /*** UI Effect ***/
+                else if ( params.effectImg === "puff" ){
+
+                    $('ul.screen_block').children('li[data-screen="'+g+'"]').toggle('puff', params.speedImg)
+
+                    if( o >= 1 ){
+                        setTimeout(function(){ $('ul.screen_block').children('li[data-screen="'+o+'"]').toggle('puff', params.speedImg); },timeOut)
+                    }
+                    else{
+                        setTimeout(function(){ $('ul.screen_block').children('li:last').toggle('puff', params.speedImg); },timeOut)
+                    }
+                }
+
                 else{
 
                     $('ul.screen_block').children('li[data-screen="'+g+'"]').slideUp(params.speedImg)
